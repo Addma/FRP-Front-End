@@ -1,6 +1,6 @@
 import './App.css';
 import App from './main.js';
-import About from './landing/about';
+import About from './components/about';
 import Login from './components/login';
 import Contact from './components/contact';
 import SignUp from './components/signup';

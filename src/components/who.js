@@ -4,12 +4,13 @@ import York from '../images/york.png';
 import C4 from '../images/frp-c4.png';
 import IBM from '../images/ibm.png';
 import CCLA from '../images/CCLA.png';
-import {useEffect, useState} from 'react';
+import {useEffect, useState, useRef} from 'react';
 
 const About = () => {
     const [size, setSize] = useState({});
-
+    const circle = useRef()
     useEffect(() => {
+        setSize(circle.current.clientWidth)
     }, [])
 return (
     <div id="who-frp">
@@ -20,7 +21,7 @@ return (
                 To help solve these problems, C4 partnered with IBM and CCLA. </p>
             <p>The group is composed of the members Adam Araujo, Seung Hyun Kim, Ahmed, Sathini De Silva, Jaishri, Sonya, Colin, Honey, Ayesha, Soo and Umar. </p>
         </div>
-        <div className="who-img" style={size}>
+        <div className="who-img" style={{height: size}} ref={circle}>
             <img src="" alt=""/>
         </div>
         </div>

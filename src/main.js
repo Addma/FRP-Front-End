@@ -1,11 +1,10 @@
 import React from "react";
 import Nav from'./components/nav';
-import About from './landing/about';
+import About from './components/about';
 import Help from './landing/whohelp';
 import How from './landing/howworks';
 import Involved from './landing/difference';
-import Who from './landing/who';
-import Story from './landing/story';
+import Who from './components/who';
 import Contact from './components/contact';
 import Difference from './landing/difference';
 import Join from "./landing/join";

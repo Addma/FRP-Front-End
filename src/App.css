@@ -101,7 +101,7 @@ nav {
   border: 1px solid;
   color: black;
   text-align: center;
-  width: 80%;
+  width: 100%;
   margin:auto;
   text-decoration: none;
 }
@@ -113,8 +113,7 @@ nav {
 }
 #about-frp a {
   text-decoration: none;
-  color: red;
-}
+ }
 #about-frp a:hover {
   text-decoration: double;
 }
@@ -175,16 +174,28 @@ nav {
 .how-info2::after{
   content:'';
   position: absolute;
+  background-color: #f5ef37;
+  height: 50vh;
+  width: 50vh;
+  border-radius: 50%;
+  opacity: 0.4;
+  z-index: -1;
+  left: 80%;
+  overflow:hidden;
+}
+.how-info2::before{
+  content:'';
+  position: absolute;
   background-color: #f5ef376b;
-  height: 100vh;
-  width: 100vh;
+  height: 50vh;
+  width: 50vh;
   border-radius: 50%;
   opacity: 0.4;
   z-index: -1;
   left: 70%;
+  top: 150%;
   overflow:hidden;
 }
-
 #how-mid {
   width: 30%;
   height: 100%;
@@ -202,7 +213,7 @@ nav {
   background-color: none;
   border: 1.5px solid;
 }
-#story-land {
+#story {
   width: 80%;
   height: 100vh;
   display:flex;
@@ -210,30 +221,50 @@ nav {
   margin: auto;
 }
 .story {
-  width: 50%;
+  width: 100%;
   display:flex;
   flex-direction: column;
   gap: 5vh;
+  height: 100%;
 }
-.story2 {
-  widtH: 50%;
-  background-color: black;
-  border-radius: 50%;
-}
-.story2 > div {
+.story-img {
+  background-image: url('./images/apple-picker.png');
   width: 100%;
-  border-radius: 50%;
+  height: auto;
+  background-size:  contain;
+  background-repeat: no-repeat;
+}
+.story-wrapper {
+  padding: 5%;
+    width: 100%;
+    height: 100%;
+    display:flex;
+    background-image: url('./images/apple-picker.png');
+  background-size:  contain;
+  background-repeat: no-repeat;
+  background-position: right;
 
+}
+.story-wrapper div:first-child{
+  width: 50%;
+  display:flex;
+  flex-direction: column;
+  gap: 10vh;
 }
 #who-frp {
   width: 80%;
   height: 100vh;
   margin: auto;
+  display:flex;
+  flex-direction: column;
+  gap: 5vh;
 }
 .who-info {
   display:flex;
   flex-direction: column;
   gap: 5vh;
+  width: 50%;
+  font-size: 1.5vw;
 }
 .who-img {
   width: 50%;
@@ -243,11 +274,11 @@ nav {
 .who-partner {
   padding: .5%;
   text-align: center;
-  width: 80%;
+  width: 100%;
   height: 20%;
-  background-color: #83c3ff57;
-  margin: auto;
+  background-color: #f5ef378e;
   display:flex;
+  margin: auto;
   flex-direction:column;
 }
 .who-flex {
@@ -258,7 +289,7 @@ nav {
   justify-content:space-around;
   display:flex;
   width: 100%;
-  height: 100%;
+  height: auto;
 }
 .who-york {
   width: 25%;
@@ -351,6 +382,28 @@ nav {
 #foods {
   display: grid;
   min-height: 100vh;
+
+}
+#mission {
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  gap: 10vh;
+}
+#food-waste {
+  width: 100%;
+  background-color: #2C6916;
+  display:flex;
+}
+#food-waste img {
+  max-width: 80%;
+  max-height: 80%;
+}
+#food-waste div {
+  width: 75%;
+  display:flex;
+  flex-direction: column;
 
 }
 .profile-data {
