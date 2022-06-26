@@ -27,6 +27,7 @@ body {
 #landing {
   width: 100%;
   height: 300%;
+  font-size: 1vw;
 }
 nav > a {
   text-align: center;
@@ -42,13 +43,13 @@ nav > a:hover{
 }
 @keyframes JoinHover {
   100% {
-  background-color: white;
+  background-color:#6DCA4C;
   color: black;
   }
 }
 @keyframes JoinHoverOut {
   from {
-  background-color: white;
+  background-color:#2C6916;
   color: black;
   }
   to {
@@ -56,12 +57,14 @@ nav > a:hover{
 }
 .join-text a:hover{
   animation-name: JoinHover;
-  animation-duration: 1s;
+  animation-duration: .5s;
   animation-fill-mode: forwards;
 }
 .join-text h1 {
   white-space: nowrap;
   text-overflow:clip;
+  text-align: left !important;
+  font-size: 3vw;
 }
 .join-text p {
   font-size: 2vw;
@@ -127,7 +130,9 @@ nav {
   color: black;
   margin: auto;
   width: 80%;
-  height: 100vh;
+  min-height: 100vh;
+  max-height: fit-content;
+  
 }
 #involved-frp {
   padding: 2%;
@@ -152,7 +157,8 @@ nav {
   gap: 5vh;
 }
 .how-img1, .how-img2 {
-  height: 27.5vh;
+  width: 100%;
+  height: auto;
   padding:2%;
   background-color: #f5ef3762;
   background-repeat: no-repeat;
@@ -318,27 +324,34 @@ nav {
 }
 #contact-frp {
   display:flex;
-  width: 80%;
-  height: 100vh;
-  margin: auto;
-}
-.contact1, .contact2 {
-  display:flex;
-  width: 50%;
-  height: 80%;
   flex-direction: column;
-  gap: 5vh;
+  width: 100%;
+  padding: 2%;
+  margin: auto;
+  background-color:#2C6916;
+  gap: 1vh;
 }
-.contact2 {
-  align-items: center;
-  text-align: center;
-  justify-content: center;
-  font-size:1vw;
+#contact-frp > h2 {
+  align-self: center;
 }
-.contact1 > div {
-  width: 80%;
-  border-radius: 50%;
-  background: black;
+.contact-info {
+  width: 100%;
+  display:flex;
+  gap: 10vw;
+  justify-content: space-between;
+}
+.contact-grid {
+  display:grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10vh;
+}
+.contact-grid p {
+  width: 50%;
+}
+.contact-info > div {
+  width: 50%;
+  display:flex;
+  flex-direction: column;
 }
 #diff-wrapper {
   display: grid;
@@ -363,21 +376,46 @@ nav {
   color: white;
 }
 #login-form, #signup-form{
-  width: 50%;
-  height: 50vh;
+  background: rgb(24,102,9);
+background: linear-gradient(6deg, rgba(24,102,9,1) 35%, rgba(41,167,18,1) 73%);
+   height: 75%;
   display:flex;
   flex-direction: column;
   margin: auto;
   justify-content: space-around;
-
+  border-radius: 10%;
+  border: 10px solid #2070109c;
+  gap: 5vh;
+  padding: 5%;
+  color: white;
+}
+#login, #signup {
+  font-size: 1vw;
+  display:flex;
+  width: 100%;
+  min-height: 80vh;
+  max-height: fit-content;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 5%;
 }
 #login-form button, #signup-form button {
-  width: 10%;
+  width: 25%;
   align-self: center;
 }
+#account-label {
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 #login-form label, #signup-form label {
+  font-size: 16px;
   display:inline-block;
   width:50%;
+}
+#login-form input, #signup-form input {
+  width: 100%;
 }
 #foods {
   display: grid;
@@ -388,22 +426,51 @@ nav {
   display:flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
   text-align: center;
   gap: 10vh;
+  font-size: 1.5vw;
+}
+#mission div {
+  width: 100%;
+  height: 70vh;
+  background-image: url('./images/map-marker.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size:contain;
 }
 #food-waste {
   width: 100%;
   background-color: #2C6916;
   display:flex;
+  color:white;
+  padding: 3%;
+  gap: 10vh;
+}
+p {
+  font-size: 20px;
 }
 #food-waste img {
-  max-width: 80%;
-  max-height: 80%;
+  max-width: 100%;
+  max-height: auto;
+}
+@media screen and (max-width: 600px) {
+  #food-waste {
+    flex-direction: column;
+    font-size: 12px;
+  }
+  #food-waste div {
+    width: 100%;
+  }
 }
 #food-waste div {
-  width: 75%;
   display:flex;
   flex-direction: column;
+  gap: 10vh;
+  width: 45%;
+  font-size:
+}
+#food-waste h1 {
 
 }
 .profile-data {
@@ -453,10 +520,11 @@ width: 80%;
 .join-text > a {
   border: 1px solid;
   width: fit-content;
-  border-radius: 10px;
-  padding: 10px 20px;
+  border-radius: 50px;
+  padding: 1rem 2rem;
   background-color: #93DE81;
   cursor:pointer;
+  font-size: 1.5em;
 }
 #whohelp-grid {
   display:Grid;

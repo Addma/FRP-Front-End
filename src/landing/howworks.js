@@ -22,11 +22,11 @@ return (
          </h2>
             </div>
             <div id="how-mid">
-                <div style={size} className="how-img1"><img src={gardens} alt="community garden"/></div>
+                <div className="how-img1"><img src={gardens} alt="community garden"/></div>
                 <div style={circ}></div>
                 <div style={{width: "10px", height: "20vh", backgroundColor: "black", margin: "auto"}}></div>
                 <div style={circ}></div>
-                <div style={size} className="how-img2"><img src={gardens} alt=""/></div>
+                <div className="how-img2"><img src={gardens} alt=""/></div>
             </div>
         <div className="how-info2">
             <h1 style={{fontSize: "3vw"}}>How to use FRP?</h1>

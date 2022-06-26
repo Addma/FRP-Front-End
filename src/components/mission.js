@@ -9,7 +9,8 @@ const Mission = () => {
                 be wasted. In this way we are attempting to maximize the freshness of food prepared and served in community 
                 kitchens or given out by foodbanks.
             </h3>
-            <img src={Marker} alt="map-marker"/>
+            <div>
+            </div>
         </div>
     )
 }

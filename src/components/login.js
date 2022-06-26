@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import {useState, useRef, useEffect} from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { login, logout } from '../features/userSlice';
+import Footer from './footer';
 const Login = () => {
     const user = useSelector((state) => state.user.user)   
     console.log(user);
@@ -51,16 +52,22 @@ const Login = () => {
     return (
         <div>
         <Nav bg={BG()}/> 
+        <div id="login">
         <form onSubmit={handleSubmit}>
-            <fieldset id="login-form">
-            <h1>Login</h1>
+            <div id="login-form">
+                <div>
+            <h1>Hello,</h1>
+            <h1>Welcome Back</h1>
+                </div>
             <label htmlFor="email">Email:<input onChange={e => setEmail(e.target.value)} id="email" value={email} placeholder="info@example.com"/></label>
             <label htmlFor="password">Password:<input type="password" onChange={e => setPass(e.target.value)} id="password" value={password}/></label>
+            <p>Don't have an account? <Link to="/signup">Create Account</Link></p>
             <button type="submit" ref={loginRef}>Login</button>
-                    <p>Don't have an account? <Link to="/signup">Create Account</Link></p>
-
-            </fieldset>
+                    
+            </div>
         </form>
+        </div>
+        <Footer/>
         </div>
     )
 }

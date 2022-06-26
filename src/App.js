@@ -7,6 +7,7 @@ import SignUp from './components/signup';
 import Profile from './components/profile';
 import {Route, Routes} from 'react-router-dom';
 import Dashboard from './components/dashboard';
+import Nav from './components/nav';
 function Router() {
   return (
   <Routes>
@@ -18,6 +19,7 @@ function Router() {
     <Route path="/signup" element={<SignUp/>}/>
     <Route path="/dashboard" element={<Dashboard />}/>
     <Route path="/profile" element={<Profile />}/>
+    <Route path="/works" element={<Nav/>}/>
   </Routes>
   );
 }

@@ -3,6 +3,7 @@ import { useState } from "react"
 import BG from '../help';
 import Nav from './nav';
 import { Link } from 'react-router-dom';
+import Footer from './footer';
 const SignUp = () => {
 
     const [pass, setPass] = useState('');
@@ -50,9 +51,9 @@ const SignUp = () => {
     return (
         <div>
             <Nav bg={BG()}/>
-        <div >
+        <div id="signup">
         <form onSubmit={handleSubmit}>
-            <fieldset id="signup-form">
+            <div id="signup-form">
                 <h1>Sign up</h1>
                 <label htmlFor='signup-org'>Garden/Kitchen Name:<input onChange={e => setOrg(e.target.value)} value={org} id="signup-org"/></label>
                 <label htmlFor="signup-email">E-mail:<input value={email} onChange={e => setMail(e.target.value)} id="signup-email" placeholder="name@example.com"></input></label>
@@ -64,9 +65,10 @@ const SignUp = () => {
                 </label>
                 <button type="submit">Sign-up</button>
                 <p>Have an account? <Link to="/login">Login</Link></p>
-            </fieldset>
+            </div>
         </form>
         </div>
+        <Footer />
         </div>
     )
 
