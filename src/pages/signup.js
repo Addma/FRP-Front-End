@@ -1,10 +1,9 @@
 import React from 'react';
 import { useState } from "react"
-import BG from '../help';
-import Nav from './nav';
+import Nav from '../components/nav';
 import { Link } from 'react-router-dom';
-import Footer from './footer';
-import Terms from './terms';
+import Footer from '../components/footer';
+import Terms from '../components/terms';
 const SignUp = () => {
 
     const [pass, setPass] = useState('');
@@ -54,12 +53,14 @@ const SignUp = () => {
     console.log(terms)
     return (
         <div>
-            <Nav bg={BG()}/>
+            <Nav />
         <div id="signup">
         <form onSubmit={handleSubmit}>
             <div id="signup-form">
                 
-                <h1>Sign up</h1>
+                <div><h1>Get Started</h1>
+                <p style={{textAlign: "center"}}>already a member? <Link to='/login'>Log in</Link></p>
+                </div>
                 <div>
                 <label htmlFor='signup-org'>Organization</label>
                 <input onChange={e => setOrg(e.target.value)} value={org} id="signup-org"/>

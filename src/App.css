@@ -285,6 +285,9 @@ nav {
   margin: auto;
   flex-direction:column;
 }
+.who-partner h1 {
+  font-size: 2em;
+}
 .who-flex {
   display:flex;
   height: 80%;
@@ -326,11 +329,14 @@ nav {
   width: 100%;
   padding: 2%;
   margin: auto;
-  background-color:#2C6916;
+  background-color:#C0E7B2;
   gap: 1vh;
 }
 #contact-frp > h2 {
-  align-self: center;
+  margin-left: 25%;
+}
+#contact-frp > h1 {
+  font-size: 3em;
 }
 .contact-info {
   width: 100%;
@@ -350,6 +356,7 @@ nav {
   width: 50%;
   display:flex;
   flex-direction: column;
+  font-size: 1em;
 }
 #diff-wrapper {
   display: grid;
@@ -376,7 +383,6 @@ nav {
 #login-form, #signup-form{
   background: rgb(24,102,9);
 background: linear-gradient(6deg, rgba(24,102,9,1) 35%, rgba(41,167,18,1) 73%);
-   height: 75%;
   display:flex;
   flex-direction: column;
   margin: auto;
@@ -393,9 +399,13 @@ background: linear-gradient(6deg, rgba(24,102,9,1) 35%, rgba(41,167,18,1) 73%);
   width: 100%;
   min-height: 80vh;
   max-height: fit-content;
-  justify-content: flex-end;
+  justify-content:flex-end;
   align-items: center;
-  padding: 5%;
+  padding: 5% 10%;
+}
+#login form, #signup form {
+  width: 500px;
+  max-height: auto;
 }
 #login-form button, #signup-form button {
   align-self: center;
@@ -405,6 +415,10 @@ background: linear-gradient(6deg, rgba(24,102,9,1) 35%, rgba(41,167,18,1) 73%);
   color: white;
   font-size: 16px;
   border-radius: 10px;
+}
+#signup-form a, #login-form a {
+  color:#93DE81;
+  text-decoration: none;
 }
 #signup-form input[type="checkbox"]{
   width: initial;
@@ -477,6 +491,30 @@ background: linear-gradient(6deg, rgba(24,102,9,1) 35%, rgba(41,167,18,1) 73%);
   padding: 3%;
   gap: 10vh;
 }
+#food-waste2{
+  width: 100%;
+  background-image: url('./images/grocery-bag.jpg');
+  display:flex;
+  background-size:100% 100%;
+  background-position:right;
+  background-repeat: no-repeat;
+  color:white;
+  padding: 3%;
+  gap: 10vh;
+  height: 80vh;
+  background-color: #2C6916;
+}
+#food-waste2 span {
+  font-size:2em;
+  font-weight: 900;
+}
+#food-waste2 div {
+  width: 45%;
+  display:flex;
+  flex-direction: column;
+  gap: 10vh;
+}
+
 p {
   font-size: 20px;
 }
@@ -484,10 +522,12 @@ p {
   max-width: 100%;
   max-height: auto;
 }
+h1 {
+  font-size: 2.5em;
+}
+
 @media screen and (max-width: 600px) {
-  * {
-    font-size: 10px;
-  }
+
   #food-waste {
     flex-direction: column;
     font-size: 12px;
@@ -501,7 +541,6 @@ p {
   flex-direction: column;
   gap: 10vh;
   width: 45%;
-  font-size:
 }
 #food-waste h1 {
 
@@ -609,11 +648,11 @@ h2 span {
 }
 #map-container{
   width: 75%;
-  height: 50vh;
+  height: 100vh;
   
 }
 #terms-modal {
-  background-color: rgba(200, 200, 200, 0.582);
+  background-color: rgba(200, 200, 200, 0.55);
   width: 100vw;
   padding: 10%;
   display:flex;
@@ -632,5 +671,49 @@ h2 span {
   flex-direction: column;
 }
 .terms-container button {
-  
+  background-color: #2C6916;
+  border-radius: 10px;
+}
+#howhelp-flex {
+  display:flex;
+  justify-content: center;
+  flex-direction: column;
+  padding: 5%;
+  gap: 5vh;
+  align-items: center;
+}
+#howhelp-flex img {
+  width: 30%;
+  max-height: auto;
+}
+#howhelp-flex > div {
+  display:flex;
+  gap: 2vw;
+}
+#howhelp-flex > div > div {
+  display:flex;
+  gap: 2vh;
+  flex-direction: column;
+}
+#howhelp-flex h2 {
+  font-weight: 300;
+}
+#howuse-flex {
+  background-image: url('./images/communication-icon.png');
+  background-size:30%;
+  background-repeat: no-repeat;
+  background-position:right;
+  padding: 5%;
+}
+#howuse-flex > div {
+  display:flex;
+  flex-direction: column;
+  gap: 5vh;
+  width: 70%;
+}
+#howuse-flex h2 {
+  font-weight: 300;
+}
+#howuse-flex span {
+  background-color: #47ff052c;
 }

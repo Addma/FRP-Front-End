@@ -2,8 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { getUser } from '../features/userSlice';
 import { useDispatch, useSelector } from 'react-redux'
 import { login } from '../features/userSlice';
-import Nav from './nav';
-import bg from '../help';
+import Nav from '../components/nav';
 import FRP from '../images/frp.png'
 const Profile = () => {
     const user = useSelector((state) => getUser(state));
@@ -43,7 +42,7 @@ const Profile = () => {
     }
     return (
         <div id="profile-cols">
-            <Nav bg={bg()}/>
+            <Nav/>
     <div id="profile">
         <div id="profile-info">
             <img src={user.image ? user.image : FRP} alt="profile"/>

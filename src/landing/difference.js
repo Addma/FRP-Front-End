@@ -1,6 +1,4 @@
 import React from "react";
-import Nav from '../components/nav';
-import BG from '../help';
 import Donation from '../images/food-donation.jpg';
 import Volunteer from '../images/volunteering.jpg';
 const Difference = () => {

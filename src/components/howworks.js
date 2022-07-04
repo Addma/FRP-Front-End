@@ -1,5 +1,4 @@
 import React from "react";
-import BG from '../help';
 import gardens from '../images/garden.png';
 import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";

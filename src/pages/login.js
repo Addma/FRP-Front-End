@@ -1,10 +1,9 @@
-import BG from '../help';
-import Nav from './nav';
+import Nav from '../components/nav';
 import { Link } from 'react-router-dom';
 import {useState, useRef, useEffect} from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { login, logout } from '../features/userSlice';
-import Footer from './footer';
+import Footer from '../components/footer';
 const Login = () => {
     const user = useSelector((state) => state.user.user)   
     console.log(user);
@@ -48,10 +47,10 @@ const Login = () => {
 
     useEffect(() => {
         dispatch(logout())
-    }, [])
+    }, [dispatch])
     return (
         <div>
-        <Nav bg={BG()}/> 
+        <Nav /> 
         <div id="login">
         <form onSubmit={handleSubmit}>
             <div id="login-form">
@@ -59,11 +58,12 @@ const Login = () => {
             <h1>Hello,</h1>
             <h1>Welcome Back</h1>
                 </div>
-            <label htmlFor="email">Email:<input onChange={e => setEmail(e.target.value)} id="email" value={email} placeholder="info@example.com"/></label>
-            <label htmlFor="password">Password:<input type="password" onChange={e => setPass(e.target.value)} id="password" value={password}/></label>
-            <p>Don't have an account? <Link to="/signup">Create Account</Link></p>
+            <label htmlFor="email">Email:</label>
+            <input onChange={e => setEmail(e.target.value)} id="email" value={email} placeholder="info@example.com"/>
+            <label htmlFor="password">Password:</label>
+            <input type="password" onChange={e => setPass(e.target.value)} id="password" value={password}/>
             <button type="submit" ref={loginRef}>Login</button>
-                    
+            <p>Not a member? <Link to="/signup">Register now</Link></p>
             </div>
         </form>
         </div>

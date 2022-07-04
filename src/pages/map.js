@@ -1,5 +1,5 @@
-import Nav from './nav';
-import Footer from './footer'
+import Nav from '../components/nav';
+import Footer from '../components/footer'
 import {useEffect, useState} from 'react'
 const Map = () => {
     const [closeOrgs, setCloseOrgs] = useState([])

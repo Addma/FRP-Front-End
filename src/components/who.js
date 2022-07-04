@@ -1,5 +1,4 @@
 import React from "react";
-import BG from '../help';
 import York from '../images/york.png';
 import C4 from '../images/frp-c4.png';
 import IBM from '../images/ibm.png';

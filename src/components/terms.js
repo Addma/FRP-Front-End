@@ -8,7 +8,7 @@ const Terms = ({closeTerms, acceptTerms}) => {
                 <h1>Terms of Conditions</h1>
                 <p>You need to accept this.</p>
                 <div>
-                    <button onClick={() => {acceptTerms(true); closeTerms(false)}}>Accept</button><button>Cancel</button>
+                    <button onClick={() => {acceptTerms(true); closeTerms(false)}}>Accept</button><button onClick={() => closeTerms(false)}>Cancel</button>
                 </div>
             </div>
         </div>
