@@ -8,6 +8,7 @@ import Profile from './components/profile';
 import {Route, Routes} from 'react-router-dom';
 import Dashboard from './components/dashboard';
 import Nav from './components/nav';
+import Map from './components/map';
 function Router() {
   return (
   <Routes>
@@ -20,6 +21,7 @@ function Router() {
     <Route path="/dashboard" element={<Dashboard />}/>
     <Route path="/profile" element={<Profile />}/>
     <Route path="/works" element={<Nav/>}/>
+    <Route path="/map" element={<Map />}/>
   </Routes>
   );
 }

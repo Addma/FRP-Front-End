@@ -14,8 +14,7 @@ const Join = () => {
             <Link to="/login" style={{textDecoration: "none", color: "black"}}>JOIN NOW</Link>
             </div>
             <div className="join-img">
-                <div><img src={Cook} alt="kitchen"/></div>
-                <div><img src={Grower} alt="grower"/></div>
+                <div></div>
             </div>
         </div>
     )
