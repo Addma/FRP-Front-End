@@ -96,7 +96,7 @@ const SignUp = () => {
         </form>
         
         </div>
-        {terms && <Terms closeTerms={setTerms} acceptTerms={}/>}
+        {terms && <Terms closeTerms={setTerms} acceptTerms={setConditions}/>}
         <Footer />
         </div>
         
