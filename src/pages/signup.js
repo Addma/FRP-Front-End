@@ -30,7 +30,7 @@ const SignUp = () => {
             account: account,
             address: address
         }
-        const res = await fetch("http://localhost:3001/signup", {
+        const res = await fetch("/signup", {
             method: "POST",
             headers: {
                 'Content-Type': 'application/json',

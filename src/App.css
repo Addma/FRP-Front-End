@@ -1,7 +1,17 @@
+
+@font-face{
+  font-family: Lato;
+  src: url('./images/fonts/Lato-Regular.ttf');
+}
+@font-face{
+  font-family: Alegreya;
+  src: url('./images/fonts/AlegreyaSans-Medium.ttf');
+}
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  font-family: Lato;
 }
 body {
   margin: 0;
@@ -14,6 +24,7 @@ body {
 #landing {
   display:flex;
   flex-direction: column;
+  gap: 5vh;
 }
 
 #naxbar ul {
@@ -139,6 +150,7 @@ nav {
   width: 100%;
   margin: auto;
   background-color: #2C6916;
+  color:white;
 }
 
 .how-info {
@@ -218,35 +230,21 @@ nav {
   border: 1.5px solid;
 }
 #story {
-  width: 80%;
-  height: 100vh;
+  width: 100%;
   display:flex;
   justify-content: center;
   margin: auto;
-}
-.story {
-  width: 100%;
-  display:flex;
-  flex-direction: column;
-  gap: 5vh;
-  height: 100%;
-}
-.story-img {
-  background-image: url('./images/apple-picker.png');
-  width: 100%;
-  height: auto;
-  background-size:  contain;
-  background-repeat: no-repeat;
+  height: 100vh;
 }
 .story-wrapper {
-  padding: 5%;
+  padding: 1%;
     width: 100%;
     height: 100%;
     display:flex;
     background-image: url('./images/apple-picker.png');
   background-size:  contain;
   background-repeat: no-repeat;
-  background-position: right;
+  background-position:right;
 
 }
 .story-wrapper div:first-child{
@@ -370,7 +368,6 @@ nav {
 #diff-wrapper ul {
   display:flex;
   flex-direction: column;
-  color: white;
   width: 80%;
   margin: auto;
   gap: 10vh;
@@ -477,7 +474,7 @@ background: linear-gradient(6deg, rgba(24,102,9,1) 35%, rgba(41,167,18,1) 73%);
 }
 #mission div {
   width: 100%;
-  height: 70vh;
+  height: 90%;
   background-image: url('./images/map-marker.png');
   background-repeat: no-repeat;
   background-position: center;
@@ -492,27 +489,27 @@ background: linear-gradient(6deg, rgba(24,102,9,1) 35%, rgba(41,167,18,1) 73%);
   gap: 10vh;
 }
 #food-waste2{
-  width: 100%;
+  height: 75vh;
   background-image: url('./images/grocery-bag.jpg');
   display:flex;
-  background-size:100% 100%;
-  background-position:right;
+  background-size:cover;
+  background-position:center;
   background-repeat: no-repeat;
   color:white;
   padding: 3%;
   gap: 10vh;
-  height: 80vh;
-  background-color: #2C6916;
+  text-shadow: 2px 2px black;
 }
 #food-waste2 span {
-  font-size:2em;
+  font-size:2rem;
   font-weight: 900;
 }
 #food-waste2 div {
-  width: 45%;
+  width: 50%;
+  max-height: 70vh;
   display:flex;
   flex-direction: column;
-  gap: 10vh;
+  gap: 20vh;
 }
 
 p {
@@ -522,18 +519,26 @@ p {
   max-width: 100%;
   max-height: auto;
 }
-h1 {
-  font-size: 2.5em;
-}
 
 @media screen and (max-width: 600px) {
-
+  #howhelp-flex > div {
+    flex-direction: column;
+  }
+  #howhelp-flex img {
+    max-width: 100% !important;
+  }
   #food-waste {
     flex-direction: column;
     font-size: 12px;
   }
   #food-waste div {
     width: 100%;
+  }
+  #howhelp-flex > div > div {
+    width: 100% !important;
+  }
+  * {
+    font-size: 16px;
   }
 }
 #food-waste div {
@@ -561,6 +566,7 @@ width: 80%;
   width: 100%;
   height: 95vh;
   padding: 1%;
+  font-family: Alegreya;
 }
 .join-text {
   display:flex;
@@ -683,14 +689,18 @@ h2 span {
   align-items: center;
 }
 #howhelp-flex img {
-  width: 30%;
+  max-width: 100%;
   max-height: auto;
+}
+.howhelp-img {
+  width: 50%;
 }
 #howhelp-flex > div {
   display:flex;
   gap: 2vw;
 }
 #howhelp-flex > div > div {
+  width: 50%;
   display:flex;
   gap: 2vh;
   flex-direction: column;

@@ -6,7 +6,9 @@ const HowHelp = () => {
     return (
         <div id="howhelp-flex">
             <div>
+                <div className="howhelp-img">
             <img src={Community} alt="community-help"/>
+            </div>
                 <div>
                     <h1>Community</h1>
                     <h2>We cater to the Woburn Community with hopes of helping many more communities in the future.</h2>
@@ -16,7 +18,9 @@ const HowHelp = () => {
                 </div>
             </div>
             <div>
+            <div className="howhelp-img">
             <img src={Kitchen} alt="community-kitchen"/>
+            </div>
                 <div>
                     <h1>Community Kitchen</h1>
                     <h2>We help community kitchens to acquire needed food by facilitating a communication platform between growers and kitchens</h2>
@@ -24,7 +28,9 @@ const HowHelp = () => {
                 </div>
             </div>
             <div>
+            <div className="howhelp-img">
             <img src={Garden} alt="community-garden"/> 
+            </div>
                 <div>
                 <h1>Community Gardens</h1>
                 <h2>We help organizations such as schools, community gardens or farms to set up donation of excess vegetation.</h2>

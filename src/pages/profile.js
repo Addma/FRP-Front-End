@@ -9,12 +9,10 @@ const Profile = () => {
     const dispatch = useDispatch();
     const [foodsState, setfoodState] = useState([]);
     useEffect(() => {
-        console.log(user);
-        const foodEles = user.foods.map((food, i) => {
+        const foodEles = user.foods.map((food) => {
             return (
                 <div>
-                    <img src={food.image} alt={food.label}/>
-                    <p>{food.label}</p>
+                    <p>{food}</p>
                 </div>
             )
         })
@@ -23,7 +21,7 @@ const Profile = () => {
     const [foodSearch, setFoodSearch] = useState('');
     const handleFoodSearch = async () => {
         console.log(foodSearch);
-        const res = await fetch('http://localhost:3001/profile/addFood',{
+        const res = await fetch('/profile/addFood',{
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
